@@ -1,0 +1,229 @@
+body{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 3%;
+    background: url('../pexels-lucas-pezeta-3772378.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.swords-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.swords-heading{
+    margin-bottom: 20%;
+    color: #ffff;
+}
+
+/* First sword */
+
+.sword-one{
+    position: relative;
+    height: 20px;
+    width: 400px;
+    border-radius: 10px;
+    background: rgb(244, 244, 249);
+    box-shadow: inset 0 0 10px rgba(31, 224, 228, 0.9),
+                  0 0 15px  rgba(31, 224, 228, 0.9);
+    border-radius:5px 5px 0 0; 
+    transform: 30%;
+
+}
+
+.sword-one::before{
+    content: "";
+    position: absolute;
+    margin-left: 20px;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(105, 104, 104, 0.662);
+}
+
+.sword-one{
+    animation: first 1s infinite alternate;
+}
+
+@keyframes first{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 100px;
+        opacity: 0;
+    }
+}
+
+/* Second sword */
+
+.sword-two{
+    position: relative;
+    height: 20px;
+    width: 400px;
+    border-radius: 10px;
+    background: rgb(244, 244, 249);
+    margin-top: 3rem;
+    box-shadow: inset 0 0 10px rgba(137, 25, 177, 0.9),
+                0 0 15px  rgba(137, 25, 177, 0.9);
+    border-radius: 5px 5px 0 0; 
+}
+
+.sword-two::after{
+    content: "";
+    position: absolute;
+    margin-left: 330px;
+    width: 50px;
+    height: 20px;
+    background-color: rgba(105, 104, 104, 0.662);
+}
+
+.sword-two{
+    animation: second 1s infinite alternate;
+}
+
+@keyframes second{
+    0%{
+        transform: rotate(0)
+    }
+    100%{
+        transform: rotate(50deg)
+    }
+}
+
+/* Third sword */
+
+.sword-three{
+    position: relative;
+    height: 20px;
+    width: 400px;
+    background: ghostwhite;
+    margin-top: 3rem;
+    box-shadow: inset 0 0 10px rgba(184, 19, 19, 0.9),
+                0 0 15px  rgba(184, 19, 19, 0.9);
+    border-radius:5px 5px 0 0; 
+    transform-origin: 20% 100px;
+
+}
+
+.sword-three::before {
+    content: "";
+    position: absolute;
+    margin-left: 20px;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(105, 104, 104, 0.662);
+}
+
+.sword-three{
+    animation: third 1s infinite alternate;
+}
+
+@keyframes third{
+    0%{
+        transform: rotate(0)
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+}
+
+/* Newton's pendulum */
+
+ .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.circles-heading{
+    margin-bottom: 20%;
+    color: #ffff;
+}
+
+.line-sword{
+    position: relative;
+    height: 20px;
+    width: 400px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 100%, rgba(6,108,97,1) 100%);
+    border-radius: 5px; 
+}
+
+.circles{
+    display: flex;
+    margin-top: 100px;
+}
+
+.circle{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(201,201,201,1) 0%, rgba(255,255,255,1) 100%, rgba(6,108,97,1) 100%);
+    transform-origin: 50% -100px;
+}
+
+.circle::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    background-color: rgb(226, 226, 226);
+    top: -100px;
+    left: 50%;
+}
+
+
+.circle-first{
+    animation: first-circle 0.8s infinite alternate;
+}
+
+@keyframes first-circle {
+    0%, 50%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+
+.circle-last{
+    animation: last 0.8s infinite 0.8s alternate;
+}
+
+@keyframes last {
+    0%, 50%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
+
+/* Media */
+
+@media all and (max-width: 992px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swords-container{
+    margin-bottom: 40%;    
+    }
+
+    .swords-heading{
+    margin-bottom: 50%; 
+    }
+
+}
