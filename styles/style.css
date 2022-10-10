@@ -69,10 +69,11 @@ body{
     width: 400px;
     border-radius: 10px;
     background: rgb(244, 244, 249);
-    margin-top: 3rem;
+    margin-top: 1rem;
     box-shadow: inset 0 0 10px rgba(137, 25, 177, 0.9),
                 0 0 15px  rgba(137, 25, 177, 0.9);
     border-radius: 5px 5px 0 0; 
+    transform-origin: 50% 20px;
 }
 
 .sword-two::after{
@@ -104,11 +105,11 @@ body{
     height: 20px;
     width: 400px;
     background: ghostwhite;
-    margin-top: 3rem;
+    margin-top: 1rem;
     box-shadow: inset 0 0 10px rgba(184, 19, 19, 0.9),
                 0 0 15px  rgba(184, 19, 19, 0.9);
     border-radius:5px 5px 0 0; 
-    transform-origin: 20% 100px;
+    transform-origin: 30% 100px;
 
 }
 
@@ -223,7 +224,40 @@ body{
     }
 
     .swords-heading{
-    margin-bottom: 50%; 
+    margin-bottom: 200px; 
     }
+
+    .sword-one, .sword-two, .sword-three{
+        width: 300px;
+    }
+
+    .sword-two:after{
+        margin-left: 230px;
+    }
+
+    .sword-two{
+        transform-origin: 75% 10px;  
+    }
+
+    .sword-three{
+        transform-origin: 10% -10px;
+    }
+
+    /* Newton's pendulum */
+
+    .circles-heading{
+        width: 250px;
+    }
+
+    .line-sword{
+    width: 200px;
+    height: 10px;
+    }
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+    
+
 
 }
